@@ -366,7 +366,7 @@ async def m_cb(b, cb):
 @errors
 async def play(_, message: Message):
     global que
-    lel = await message.reply("**🔄 Memproses...**")
+    lel = await message.reply("**🔄 tunggu ya sayang...**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
     try:
@@ -420,7 +420,7 @@ async def play(_, message: Message):
         )
         return
     text_links = None
-    await lel.edit("**🔎 Menemukan lagu...**")
+    await lel.edit("**🔎 ribet bat lu minta lagu ge...**")
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
@@ -470,7 +470,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("**🎵 Memproses lagu...**")
+        await lel.edit("**🎵 Udah gratis mau cepet...**")
         ydl_opts = {
             "format": "bestaudio/best",
         }
@@ -508,7 +508,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("**🎵 Memproses lagu...**")
+        await lel.edit("**🎵 Udah gratis mau cepet...**")
         ydl_opts = {
             "format": "bestaudio/best",
         }
@@ -555,7 +555,7 @@ async def play(_, message: Message):
                             "5️⃣", callback_data=f"plll 4|{query}|{user_id}"
                         ),
                     ],
-                    [InlineKeyboardButton(text="❌", callback_data="cls")],
+                    [InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data="cls")],
                 ]
             )
             await lel.edit(toxxt, reply_markup=keyboard, disable_web_page_preview=True)
@@ -752,7 +752,7 @@ async def lol_cb(b, cb):
 @errors
 async def ytp(_, message: Message):
 
-    lel = await message.reply("**🔄 Memproses...**")
+    lel = await message.reply("**🔄 Sabar ya sayang...**")
     message.from_user.id
     message.from_user.first_name
 
